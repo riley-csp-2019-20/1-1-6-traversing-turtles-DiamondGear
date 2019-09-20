@@ -5,6 +5,8 @@ import turtle as trtl
 # create an empty list of turtles
 my_turtles = []
 
+
+
 # use interesting shapes and colors
 turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic"]
 turtle_colors = ["red", "blue", "green", "orange", "purple", "gold"]
@@ -19,13 +21,17 @@ starty = 0
 
 # 
 for t in my_turtles:
+	t.penup()
 	t.goto(startx, starty)
-	t.right(45)     
-	t.forward(50)
+	t.pendown()
+	t.left(45)
+	t.forward(30)
+	
+	
 
+	
 #	
-	startx = startx + 50
-	starty = starty + 50
-
+	startx = t.xcor()
+	starty = t.ycor()
 wn = trtl.Screen()
 wn.mainloop()
