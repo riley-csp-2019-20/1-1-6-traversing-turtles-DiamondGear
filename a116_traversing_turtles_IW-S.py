@@ -21,14 +21,18 @@ for s in turtle_shapes:
 # set the starting point of the turtle 
 startx = 0
 starty = 0
-
+count = 1
 # 
 for t in my_turtles:
+	t.speed(0)
 	t.penup()
 	t.goto(startx, starty)
 	t.pendown()
-	t.left(45)
+	t.left(45*count)
 	t.forward(40)
+	startx = t.xcor()
+	starty = t.ycor()
+	count += 1
 	
 
 
